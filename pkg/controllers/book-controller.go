@@ -15,7 +15,7 @@ var NewBook models.Book
 
 // Input point is to convert the output to JSON to sent it to API back
 func GetAllBooks(w http.ResponseWriter, r *http.Request) {
-	newBooks := models.GetAllBooks() // If this function is invoked, it will check the models folder and check the GetAllBooks function and return the value
+	newBooks := models.GetAllBooks()
 	res, _ := json.Marshal(newBooks)
 	w.Header().Set("Content-Type", "pkglication/json")
 	w.WriteHeader(http.StatusOK)
